@@ -8,7 +8,8 @@ export const products: Product[] = [
     price: 100,
     genre: "Action-adventure stealth",
     release_date: "Sep 17, 2021",
-    image: "https://upload.wikimedia.org/wikipedia/en/7/7c/Aragami_2.jpg",
+    image:
+      "https://th.bing.com/th/id/R.a44156a2ba494cb300e093552628bf28?rik=NGeY8qfP5tDfhg&pid=ImgRaw&r=0",
   },
   {
     id: "2",
@@ -18,7 +19,7 @@ export const products: Product[] = [
     genre: "Action role-playing",
     release_date: "Launch Title",
     image:
-      "https://upload.wikimedia.org/wikipedia/en/4/4a/Assassin%27s_Creed_Valhalla.jpg",
+      "https://th.bing.com/th/id/OIP.45WckNE2ze0e9dMW7-ylCQHaEK?w=333&h=187&c=7&r=0&o=5&pid=1.7",
   },
   {
     id: "3",
@@ -28,7 +29,7 @@ export const products: Product[] = [
     genre: "Platformer",
     release_date: "Launch Title",
     image:
-      "https://upload.wikimedia.org/wikipedia/en/1/1f/Astro%27s_Playroom.jpg",
+      "https://th.bing.com/th/id/OIP.wksfa1BG71kDMZ54XJTGJgHaEK?w=322&h=181&c=7&r=0&o=5&pid=1.7",
   },
   {
     id: "4",
