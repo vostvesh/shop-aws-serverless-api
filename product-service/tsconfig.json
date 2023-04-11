@@ -13,7 +13,7 @@
     "outDir": "lib",
     "esModuleInterop": true
   },
-  "include": ["src/**/*.ts", "serverless.ts"],
+  "include": ["src/**/*.ts", "serverless.ts", "src/utils/populateDb.js"],
   "exclude": [
     "node_modules/**/*",
     ".serverless/**/*",

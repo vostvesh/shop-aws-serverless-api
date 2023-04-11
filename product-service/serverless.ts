@@ -1,7 +1,11 @@
 import type { AWS } from "@serverless/typescript";
+import * as dotenv from "dotenv";
 
 import getProductsList from "@functions/getProductsList";
 import getProductsById from "@functions/getProductsById";
+import createProduct from "@functions/createProduct";
+
+dotenv.config();
 
 const serverlessConfiguration: AWS = {
   service: "product-service",
@@ -16,13 +20,26 @@ const serverlessConfiguration: AWS = {
       minimumCompressionSize: 1024,
       shouldStartNameWithService: true,
     },
+    iam: {
+      role: {
+        statements: [
+          {
+            Effect: "Allow",
+            Action: ["dynamodb:*", "rds:*"],
+            Resource: ["${ssm:PRODUCT_TABLE}", "${ssm:STOCKS_TABLE}"],
+          },
+        ],
+      },
+    },
     environment: {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: "1",
       NODE_OPTIONS: "--enable-source-maps --stack-trace-limit=1000",
+      PRODUCT_TABLE_NAME: `${process.env.PRODUCT_TABLE_NAME}`,
+      STOCKS_TABLE_NAME: `${process.env.STOCKS_TABLE_NAME}`,
     },
   },
   // import the function via paths
-  functions: { getProductsList, getProductsById },
+  functions: { getProductsList, getProductsById, createProduct },
   package: { individually: true },
   custom: {
     esbuild: {
@@ -39,7 +56,7 @@ const serverlessConfiguration: AWS = {
       title: "Product API",
       apiType: "http",
       generateSwaggerOnDeploy: true,
-      typefiles: ['./src/functions/types/Product.ts'],
+      typefiles: ["./src/functions/types/Product.ts"],
     },
   },
 };
