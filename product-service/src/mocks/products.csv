@@ -1,0 +1,11 @@
+id,product_id,count,title,description,price,genre,release_date,image
+1,1,1,Aragami 2,Awesome game,100,Action-adventure stealth,"Sep 17, 2021",https://th.bing.com/th/id/R.a44156a2ba494cb300e093552628bf28?rik=NGeY8qfP5tDfhg&pid=ImgRaw&r=0
+2,2,2,Assassin's Creed Valhalla,Awesome game,1000,Action role-playing,Launch Title,https://th.bing.com/th/id/OIP.45WckNE2ze0e9dMW7-ylCQHaEK?w=333&h=187&c=7&r=0&o=5&pid=1.7
+3,3,3,Astro's Playroom,Awesome game,10,Platformer,Launch Title,https://th.bing.com/th/id/OIP.wksfa1BG71kDMZ54XJTGJgHaEK?w=322&h=181&c=7&r=0&o=5&pid=1.7
+4,4,4,Balan Wonderworld,Awesome game,100,Platformer,2021,https://upload.wikimedia.org/wikipedia/en/6/6b/Balan_Wonderworld.jpg
+5,5,5,Borderlands 3,Awesome game,1000,Action role-playing first-person shooter,2020,https://upload.wikimedia.org/wikipedia/en/8/8a/Borderlands_3_box_art.jpg
+6,6,6,Bugsnax,Awesome game,10,Adventure,Launch Title,https://upload.wikimedia.org/wikipedia/en/c/cf/Bugsnax_cover_art.jpg
+7,7,7,Call of Duty: Black Ops Cold War,Awesome game,1000,First-person shooter,TBA,https://upload.wikimedia.org/wikipedia/en/d/d4/Call_of_Duty_Black_Ops_Cold_War.jpg
+8,8,8,Cyberpunk 2077,Awesome game,100,Action role-playing,"Dec 10, 2020",https://upload.wikimedia.org/wikipedia/en/9/9f/Cyberpunk_2077_box_art.jpg
+9,9,9,Demon's Souls,Awesome game,1000,Action role-playing,Launch Title,https://upload.wikimedia.org/wikipedia/en/a/a5/Demon%27s_Souls_%282020_video_game%29.jpg
+10,10,10,Destiny 2: Beyond Light,Awesome game,10,First-person shooter role-playing game,Launch Title,https://upload.wikimedia.org/wikipedia/en/f/f0/Destiny_2_Beyond_Light.jpg
