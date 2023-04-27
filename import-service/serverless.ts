@@ -28,10 +28,16 @@ const serverlessConfiguration: AWS = {
         Action: ["s3:*"],
         Resource: ["arn:aws:s3:::ash-uploaded"],
       },
+      {
+        Effect: "Allow",
+        Action: ["sqs:*"],
+        Resource: ["${ssm:SQS_CATALOG_ITEMS_QUEUE}"],
+      },
     ],
     environment: {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: "1",
       NODE_OPTIONS: "--enable-source-maps --stack-trace-limit=1000",
+      SQS_URL: "${ssm:SQS_PRODUCTS_URL}",
     },
   },
   // import the function via paths

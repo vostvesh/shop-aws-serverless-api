@@ -1,7 +1,7 @@
 import { serverErrorResponse, successResponse } from "@libs/api-gateway";
 import { APIGatewayEvent } from "aws-lambda";
-import { S3 } from "aws-sdk";
-const csv = require("csv-parser");
+import { S3, SQS } from "aws-sdk";
+import csv from "csv-parser";
 
 const Bucket = `ash-uploaded`;
 
@@ -11,6 +11,7 @@ const importProductsFile = async (event: APIGatewayEvent) => {
       region: "us-east-1",
       signatureVersion: "v4",
     });
+    const sqs = new SQS({ region: "us-east-1" });
 
     const key = (event as any).Records[0].s3.object.key;
 
@@ -21,28 +22,17 @@ const importProductsFile = async (event: APIGatewayEvent) => {
       Key: key,
     };
 
-    const stream = s3.getObject(params).createReadStream();
+    const stream = s3.getObject(params).createReadStream().pipe(csv());
 
-    stream.on("data", (cunk) => {
-      console.log("STREAM CHUNK:", cunk);
-    });
-
-    const file = await new Promise((resolve, reject) => {
-      stream
-        .pipe(csv())
-        .on("data", function (data: any) {
-          console.log("Data parsed: ", data);
-          records.push(data);
+    for await (const data of stream) {
+      records.push(data);
+      await sqs
+        .sendMessage({
+          QueueUrl: `${process.env.SQS_URL}`,
+          MessageBody: JSON.stringify(data),
         })
-        .on("end", function () {
-          resolve(records);
-        })
-        .on("error", function () {
-          reject("csv parse process failed");
-        });
-    });
-
-    console.log("File parsed: ", file);
+        .promise();
+    }
 
     await s3
       .copyObject({
@@ -52,10 +42,12 @@ const importProductsFile = async (event: APIGatewayEvent) => {
       })
       .promise();
 
-    await s3.deleteObject({
-      Bucket,
-      Key: encodeURIComponent(key),
-    }).promise();
+    await s3
+      .deleteObject({
+        Bucket,
+        Key: encodeURIComponent(key),
+      })
+      .promise();
 
     return successResponse({ message: "success" });
   } catch (error) {

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "1",
+    "product_id": "1",
+    "count": "1",
+    "title": "Aragami 2",
+    "description": "Awesome game",
+    "price": 100,
+    "genre": "Action-adventure stealth",
+    "release_date": "Sep 17, 2021",
+    "image": "https://th.bing.com/th/id/R.a44156a2ba494cb300e093552628bf28?rik=NGeY8qfP5tDfhg&pid=ImgRaw&r=0"
+  },
+  {
+    "id": "2",
+    "product_id": "2",
+    "count": "2",
+    "title": "Assassin's Creed Valhalla",
+    "description": "Awesome game",
+    "price": 1000,
+    "genre": "Action role-playing",
+    "release_date": "Launch Title",
+    "image": "https://th.bing.com/th/id/OIP.45WckNE2ze0e9dMW7-ylCQHaEK?w=333&h=187&c=7&r=0&o=5&pid=1.7"
+  },
+  {
+    "id": "3",
+    "product_id": "3",
+    "count": "3",
+    "title": "Astro's Playroom",
+    "description": "Awesome game",
+    "price": 10,
+    "genre": "Platformer",
+    "release_date": "Launch Title",
+    "image": "https://th.bing.com/th/id/OIP.wksfa1BG71kDMZ54XJTGJgHaEK?w=322&h=181&c=7&r=0&o=5&pid=1.7"
+  },
+  {
+    "id": "4",
+    "product_id": "4",
+    "count": "4",
+    "title": "Balan Wonderworld",
+    "description": "Awesome game",
+    "price": 100,
+    "genre": "Platformer",
+    "release_date": "2021",
+    "image": "https://upload.wikimedia.org/wikipedia/en/6/6b/Balan_Wonderworld.jpg"
+  },
+  {
+    "id": "5",
+    "product_id": "5",
+    "count": "5",
+    "title": "Borderlands 3",
+    "description": "Awesome game",
+    "price": 1000,
+    "genre": "Action role-playing first-person shooter",
+    "release_date": "2020",
+    "image": "https://upload.wikimedia.org/wikipedia/en/8/8a/Borderlands_3_box_art.jpg"
+  },
+  {
+    "id": "6",
+    "product_id": "6",
+    "count": "6",
+    "title": "Bugsnax",
+    "description": "Awesome game",
+    "price": 10,
+    "genre": "Adventure",
+    "release_date": "Launch Title",
+    "image": "https://upload.wikimedia.org/wikipedia/en/c/cf/Bugsnax_cover_art.jpg"
+  },
+  {
+    "id": "7",
+    "product_id": "7",
+    "count": "7",
+    "title": "Call of Duty: Black Ops Cold War",
+    "description": "Awesome game",
+    "price": 1000,
+    "genre": "First-person shooter",
+    "release_date": "TBA",
+    "image": "https://upload.wikimedia.org/wikipedia/en/d/d4/Call_of_Duty_Black_Ops_Cold_War.jpg"
+  },
+  {
+    "id": "8",
+    "product_id": "8",
+    "count": "8",
+    "title": "Cyberpunk 2077",
+    "description": "Awesome game",
+    "price": 100,
+    "genre": "Action role-playing",
+    "release_date": "Dec 10, 2020",
+    "image": "https://upload.wikimedia.org/wikipedia/en/9/9f/Cyberpunk_2077_box_art.jpg"
+  },
+  {
+    "id": "9",
+    "product_id": "9",
+    "count": "9",
+    "title": "Demon's Souls",
+    "description": "Awesome game",
+    "price": 1000,
+    "genre": "Action role-playing",
+    "release_date": "Launch Title",
+    "image": "https://upload.wikimedia.org/wikipedia/en/a/a5/Demon%27s_Souls_%282020_video_game%29.jpg"
+  },
+  {
+    "id": "10",
+    "product_id": "10",
+    "count": "10",
+    "title": "Destiny 2: Beyond Light",
+    "description": "Awesome game",
+    "price": 10,
+    "genre": "First-person shooter role-playing game",
+    "release_date": "Launch Title",
+    "image": "https://upload.wikimedia.org/wikipedia/en/f/f0/Destiny_2_Beyond_Light.jpg"
+  }
+]

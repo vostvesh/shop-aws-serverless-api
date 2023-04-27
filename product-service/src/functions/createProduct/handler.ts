@@ -11,7 +11,7 @@ import dotenv from "dotenv";
 const dynamo = new AWS.DynamoDB.DocumentClient();
 dotenv.config();
 
-const postProduct = async (product: Product, stock: Stock) => {
+export const postProduct = async (product: Product, stock: Stock) => {
   return dynamo
     .transactWrite({
       TransactItems: [
