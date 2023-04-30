@@ -55,6 +55,38 @@ const serverlessConfiguration: AWS = {
       concurrency: 10,
     },
   },
+  resources: {
+    Resources: {
+      GatewayResponseAccessDenied: {
+        Type: "AWS::ApiGateway::GatewayResponse",
+        Properties: {
+          ResponseParameters: {
+            "gatewayresponse.header.Access-Control-Allow-Origin": "'*'",
+            "gatewayresponse.header.Access-Control-Allow-Headers": "'*'",
+          },
+          ResponseType: "ACCESS_DENIED",
+          RestApiId: {
+            Ref: "ApiGatewayRestApi",
+          },
+          StatusCode: "403",
+        },
+      },
+      GatewayResponseUnauthorized: {
+        Type: "AWS::ApiGateway::GatewayResponse",
+        Properties: {
+          ResponseParameters: {
+            "gatewayresponse.header.Access-Control-Allow-Origin": "'*'",
+            "gatewayresponse.header.Access-Control-Allow-Headers": "'*'",
+          },
+          ResponseType: "UNAUTHORIZED",
+          RestApiId: {
+            Ref: "ApiGatewayRestApi",
+          },
+          StatusCode: "401",
+        },
+      },
+    },
+  },
 };
 
 module.exports = serverlessConfiguration;

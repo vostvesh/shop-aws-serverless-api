@@ -15,6 +15,13 @@ export default {
             },
           },
         },
+        authorizer: {
+          name: "basicAuthorizer",
+          arn: "${ssm:BASIC_AUTHORIZER_ARN}",
+          resultTtlInSeconds: 0,
+          identitySource: "method.request.header.Authorization",
+          type: "token",
+        },
       },
     },
   ],
